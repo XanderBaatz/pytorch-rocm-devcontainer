@@ -4,7 +4,8 @@ A simple and straight forward PyTorch ROCm DevContainer with CuPy support. Usefu
 ### Settings
 All there is to configure manually is:
 - The memory in the `devcontainer.json` file (currently set to `8G`).
-- `HCC_AMDGPU_TARGET` and `HSA_OVERRIDE_GFX_VERSION` in the `Dockerfile`. Run `rocminfo | grep gfx` in the terminal to determine the GPU.
+- `HCC_AMDGPU_TARGET` and `HSA_OVERRIDE_GFX_VERSION` in the `Dockerfile`.
+  - Run `rocminfo | grep gfx` in the terminal to determine the GPU.
 - Any additional Python packages you wish to install at initialization in `requirements.txt`.
 - For any packages that require NumPy or SciPy, it's a good idea to install them before CuPy. This is because CuPy will replace these packages with GPU-accelerated NumPy and SciPy equivalents.
 
